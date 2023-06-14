@@ -98,6 +98,13 @@ function handlingInput(userInput) {
       let tempFirstTerm = termOne;
       let tempSecondTerm = termTwo;
       let tempOperation = operation;
+      if (
+        operation === "" ||
+        displayedEquation.textContent.includes("=") ||
+        termTwo === ""
+      ) {
+        break;
+      }
       calculate();
       displayedEquation.textContent =
         tempFirstTerm + tempOperation + tempSecondTerm + "=";
